@@ -72,8 +72,8 @@ def checkout(request):
         msg.send()
         print("Mail successfully sent")
 
-        account_sid = 'AC4eb065101d67c8b96b29879b03b70a16'
-        auth_token = '44357165973b9a8df29f7bf04bebdc72'
+        account_sid = 'YOUR_ACOUNT_SID'
+        auth_token = 'YOUR_AUTH_TOKEN'
         client = Client(account_sid, auth_token)
 
         message = client.messages \
@@ -83,7 +83,7 @@ def checkout(request):
                  ' Address :' + address +
                  ' Phone number: ' + phone,
 
-            from_='+14847200081',
+            from_='+14**********',
             to='+91' + phone,
 
         )
@@ -164,18 +164,3 @@ def replyComment(request):
         reply.save();
         messages.success(request, "Your comment has been posted successfully")
         return render(request, 'ViewDetail.html', {'shops': shops, 'shop_now': shop_now, 'replys': replys,'commentsss':commentsss})
-
-
-
-'''def postComment(request):
-    if request.method=="POST":
-        comment = request.POST.get('comment')
-        user = request.user
-        comid = request.POST.get('id')
-        comment = Comments(comment=comment, user=user,comid=comid)
-        comment.save()
-        messages.success(request, "Your comment has been posted successfully")
-
-    else:
-        pass
-    return redirect("ShopNow1.html");'''
