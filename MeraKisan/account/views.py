@@ -20,15 +20,15 @@ from django.forms.models import model_to_dict
 def send_otp(number, otp):
     from twilio.rest import Client
 
-    account_sid = 'AC4eb065101d67c8b96b29879b03b70a16'
-    auth_token = '44357165973b9a8df29f7bf04bebdc72'
+    account_sid = 'Your_account_sid'
+    auth_token = 'Your_AUTH_token'
     client = Client(account_sid, auth_token)
 
     message = client.messages \
         .create(
         body='You have Successfully Registered in Mera Kisan '
              'Your Otp is'+otp,
-        from_='+14847200081',
+        from_='+**********',
         to ='+91'+number,
 
     )
