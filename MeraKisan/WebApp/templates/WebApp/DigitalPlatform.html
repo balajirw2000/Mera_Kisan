@@ -1,0 +1,959 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Store</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">
+
+    <!--Used for Icons-->
+    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href={%static "css/home.css"%}>
+
+
+    <style>
+         .navbar {
+  border-bottom: 1px solid #bceb3c;
+}
+
+.container-fluid{
+  float: right;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #bceb3c;
+}
+.nav-item:hover{
+    color: #bceb3c;
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: #bceb3c;
+}
+
+.icon-cart {
+  color: #bceb3c;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  border: 1px solid #bceb3c;
+}
+
+.navbar-bg-color {
+  background-color: white;
+}
+
+.navbar-nav {
+  margin-right: 4%;
+}
+
+.nav-item{
+  margin: 0.75em;
+}
+
+.navbar-text {
+  font-weight: 500;
+}
+
+/* Carousel Section */
+
+.btn {
+  color: #fff;
+  background-color: #bceb3c;
+  border-color: #bceb3c;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #81b214;
+  border-color: #81b214;
+}
+
+.carousel-caption {
+  position: static;
+}
+
+.carousel-img {
+  height: auto;
+}
+
+/* .carousel-container{
+  position: relative;
+  text-align: center;
+} */
+
+.carousel-text1 {
+  font-family: "PT Serif", serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  line-height: 1.3;
+  font-size: 8.5rem;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.carousel-text2 {
+  font-family: "PT Serif", serif;
+  padding: 35%;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  line-height: 1.1;
+  font-size: 3.5rem;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.carousel-text3 {
+  font-family: "PT Serif", serif;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  line-height: 1.25;
+  font-size: 5rem;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.carousel-text3-subHeading {
+  position: absolute;
+  top: 5%;
+  left: auto;
+  text-align: center;
+  padding: 20%;
+  line-height: 1.5;
+}
+
+.carousel-button {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+}
+
+/* .carousel-page3-buttons{
+
+} */
+
+.carousel-button1{
+  position: absolute;
+  top: 50%;
+  left: auto;
+  margin: 3% 1%;
+  width: 15%;
+
+}
+
+
+.carousel-page3-button2 {
+  background-color: transparent;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10%;
+}
+
+/* Footer */
+
+#footer {
+  color: #d3d3d3;
+  text-align: center;
+  background-color: #001524;
+  padding: 1.0%;
+}
+
+.back-to-top {
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
+
+.footer-icons {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.footer-icons:hover {
+  color: #fff;
+}
+.off-info .sm-title {
+    background: var(--carribean-green);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+ /*Cards*/
+  .id{
+    color: yellow;
+    text-decoration: bold;
+
+  }
+  .Admin
+  {
+      color: green;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+
+.Login
+{
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: green;
+  border-radius: 10px;
+  width: 500px;
+  margin-left: 400px;
+}
+
+
+#text,
+select {
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.Login{
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 0 20px 25px rgba(10, 10, 10, 0.2);
+}
+
+    </style>
+</head>
+
+<body>
+
+
+<br><br>
+
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-text fixed-top navbar-bg-color">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin-left: 20px;">Mera Kisan</a>
+
+                        <a class="nav-link" href="#"><i class="fas fa-cart-plus icon-cart"></i></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto mr-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="\">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/ShopNow">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/DigitalPlatform">Digital Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/logout">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Login/Sign Up
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/account/login">Login</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="/signup1">Sign Up (Farmer)</a></li>
+
+                            <li><a class="dropdown-item" href="/account/registerc">Sign Up (Customer)</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+         <br>
+         <br>
+         <br>
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-container" data-bs-ride="carousel"
+        data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-container carousel-item active">
+                <img src="\static/images/HomeDigital.jpg" class="d-block w-100 carousel-img" alt="">
+
+            </div>
+            <div class="carousel-container carousel-item">
+                <img src="\static/images/LoginDigital.jpg" class="d-block w-100 carousel-img" alt="">
+
+            </div>
+            <div class="carousel-container carousel-item">
+                <img src="\static/images/Registerdigital.png" class="d-block w-100 carousel-img" alt=""
+            </div>
+<!--            <div class="carousel-container carousel-item">-->
+<!--                <img src="\static/images/AddDigital.jpg" class="d-block w-100 carousel-img" alt=""-->
+<!--            </div>-->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<!--Instructions-->
+      <!--Audio-->
+      <script>
+        function audio1() {
+          var audio = document.getElementById("Audio21");
+          audio.play();
+        }
+        function audio2() {
+          var audio = document.getElementById("Audio22");
+          audio.play();
+        }
+        function audio3() {
+          var audio = document.getElementById("Audio23");
+          audio.play();
+        }
+        function audio4() {
+          var audio = document.getElementById("Audio24");
+          audio.play();
+        }
+        function audio5() {
+          var audio = document.getElementById("Audio25");
+          audio.play();
+        }
+        function audio6() {
+          var audio = document.getElementById("Audio26");
+          audio.play();
+        }
+        function audio7() {
+          var audio = document.getElementById("Audio27");
+          audio.play();
+        }
+        function audio8() {
+          var audio = document.getElementById("Audio28");
+          audio.play();
+        }
+        function audio9() {
+          var audio = document.getElementById("Audio29");
+          audio.play();
+        }
+        function audio10() {
+          var audio = document.getElementById("Audio30");
+          audio.play();
+        }
+        function audio11() {
+          var audio = document.getElementById("Audio31");
+          audio.play();
+        }
+        function audio12() {
+          var audio = document.getElementById("Audio32");
+          audio.play();
+        }
+        function audio13() {
+          var audio = document.getElementById("Audio33");
+          audio.play();
+        }
+        function audio14() {
+          var audio = document.getElementById("Audio34");
+          audio.play();
+        }
+        function audio15() {
+          var audio = document.getElementById("Audio35");
+          audio.play();
+        }
+      </script>
+      <!--Audio Ends-->
+
+
+
+      <!--Cards-->
+      <h3 class="Admin text-align"> Steps to sign in and registration.
+        <audio id="Audio21">
+          <source src="{% static 'audios/Audio21.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio1()" /><br></h3>
+      <div class="Login">
+
+        1. Go to home page.
+        <audio id="Audio22">
+          <source src="{% static 'audios/Audio22.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio2()" /><br><br>
+        2. Click on sign up button on top.
+        <audio id="Audio23">
+          <source src="{% static 'audios/Audio23.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio3()" /><br><br>
+
+        3. If you already have an account then add username and password on the visible page and click on login button.
+        <audio id="Audio24">
+          <source src="{% static 'audios/Audio24.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio4()" /><br><br>
+
+        4. Else if you are new to Mera kisan then click on sign up button and it will take you to a new page.
+        <audio id="Audio25">
+          <source src="{% static 'audios/Audio25.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio5()" /><br><br>
+        5. Enter first name, last name, email, username, phone no, and password and then click on sign up.
+        <audio id="Audio26">
+          <source src="{% static 'audios/Audio26.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio6()" /><br><br>
+        6. Once you are signed up follow step 3.
+        <audio id="Audio27">
+          <source src="{% static 'audios/Audio27.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio7()" /><br><br>
+        7. Congratulations you are successfully signed in to Mera kisan.
+        <audio id="Audio28">
+          <source src="{% static 'audios/Audio28.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio8()" /><br><br>
+      </div>
+
+      <h3 class="Admin">Steps to add your product
+        <audio id="Audio29">
+          <source src="{% static 'audios/Audio29.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio9()" /><br></h3>
+      <div class="Login">
+        1. Go to home page.
+        <audio id="Audio30">
+          <source src="{% static 'audios/Audio22.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio10()" /><br><br>
+        2. Click on shop now button on top right corner.
+        <audio id="Audio31">
+          <source src="{% static 'audios/Audio31.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio11()" /><br><br>
+        3. To proceed further follow step 3 or 4 and 5 from steps to sign in and registration.
+        <audio id="Audio32">
+          <source src="{% static 'audios/Audio32.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio12()" /><br><br>
+        4. If you are on add product page, then enter username, name of your product, category, quantity, your city name,
+        section and price of your product.
+        <audio id="Audio33">
+          <source src="{% static 'audios/Audio33.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio13()" /><br><br>
+        5. Then click on enter button to add your product.
+        <audio id="Audio34">
+          <source src="{% static 'audios/Audio34.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio14()" /><br><br>
+        6. Congratulations your product has been added to Mera kisan.
+        <audio id="Audio35">
+
+          <source src="{% static 'audios/Audio35.mp3' %}" type="audio/mpeg" loop>
+        </audio>
+        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio15()" /><br><br>
+      </div>
+
+
+<!-- Footer -->
+
+    <footer id="footer" class="container-fluid">
+        <i class="footer-icons fab fa-linkedin"></i>
+        <i class="footer-icons fab fa-facebook-f"></i>
+        <i class="footer-icons fab fa-instagram"></i>
+        <i class="footer-icons fas fa-envelope"></i>
+        <p>© Mera Kisan</p>
+        <p class="float-end"><a href="#" class="back-to-top">Back to top</a></p>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{% load static %}-->
+<!--<link rel="stylesheet" href={%static "CSS/DigitalPlatform.css"%}>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--     &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--   &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">-->
+
+
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"-->
+<!--    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--  <link rel="stylesheet" href="css/ekko.lightbox.css">-->
+
+
+<!--   &lt;!&ndash; Google Fonts &ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">-->
+
+<!--    &lt;!&ndash;Used for Icons&ndash;&gt;-->
+<!--    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>-->
+
+<!-- &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
+
+
+<!--    <style type='text/css'>-->
+<!--  iframe.goog-te-banner-frame{ display: none !important;}-->
+<!--  </style>-->
+
+<!--  <style type='text/css'>-->
+<!--  body {position: static !important; top:0px !important;}-->
+<!--  </style>-->
+
+<!--  <style type='text/css'>-->
+<!--  .goog-logo-link {display:none !important;}-->
+<!--  .goog-te-gadget{color: transparent !important;}-->
+<!--  </style>-->
+
+<!--    <style>-->
+<!--         .navbar {-->
+<!--  border-bottom: 1px solid #bceb3c;-->
+<!--}-->
+
+<!--.container-fluid{-->
+<!--  float: right;-->
+<!--}-->
+<!--.navbar-light .navbar-nav .nav-link:hover {-->
+<!--  color: #bceb3c;-->
+<!--}-->
+<!--.nav-item:hover{-->
+<!--    color: #bceb3c;-->
+<!--}-->
+<!--.navbar-light .navbar-nav .nav-link.active {-->
+<!--  color: #bceb3c;-->
+<!--}-->
+
+<!--.icon-cart {-->
+<!--  color: #bceb3c;-->
+<!--  font-size: 1.5rem;-->
+<!--}-->
+
+<!--.dropdown-menu {-->
+<!--  border: 1px solid #bceb3c;-->
+<!--}-->
+
+<!--.navbar-bg-color {-->
+<!--  background-color: white;-->
+<!--}-->
+
+<!--.navbar-nav {-->
+<!--  margin-right: 4%;-->
+<!--}-->
+
+<!--.nav-item{-->
+<!--  margin: 0.75em;-->
+<!--}-->
+
+<!--.navbar-text {-->
+<!--  font-weight: 500;-->
+<!--}-->
+
+<!--/* Footer */-->
+
+<!--#footer {-->
+<!--  color: #d3d3d3;-->
+<!--  text-align: center;-->
+<!--  background-color: #001524;-->
+<!--  padding: 1.0%;-->
+<!--}-->
+
+<!--.back-to-top {-->
+<!--  color: #d3d3d3;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--.back-to-top:hover {-->
+<!--  color: #fff;-->
+<!--}-->
+
+<!--.footer-icons {-->
+<!--  padding: 1%;-->
+<!--  margin-bottom: 1%;-->
+<!--}-->
+
+<!--.footer-icons:hover {-->
+<!--  color: #fff;-->
+<!--}-->
+<!--.off-info .sm-title {-->
+<!--    background: var(&#45;&#45;carribean-green);-->
+<!--    color: white;-->
+<!--    display: inline-block;-->
+<!--    padding: 0.5rem;-->
+<!--    position: absolute;-->
+<!--    top: 0;-->
+<!--    left: 0;-->
+<!--    writing-mode: vertical-lr;-->
+<!--    transform: rotate(180deg);-->
+<!--    z-index: 1;-->
+<!--    letter-spacing: 3px;-->
+<!--    cursor: pointer;-->
+<!--}-->
+<!--    </style>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--    &lt;!&ndash; Navbar &ndash;&gt;-->
+<!--    <nav class="navbar navbar-expand-lg navbar-light navbar-text fixed-top navbar-bg-color">-->
+<!--        <div class="container-fluid">-->
+<!--            <a class="navbar-brand" href="#">Mera Kisan</a>-->
+<!--            <a class="nav-link" href="#"><i class="fas fa-cart-plus icon-cart"></i></a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+<!--                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"-->
+<!--                aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto mr-5">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" aria-current="page" href="\">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/shop/ShopNow">Store</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" aria-current="page" href="\DigitalPlatform/">Digital Platform</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="\About">About Us</a>-->
+<!--                    </li>-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="\contact">Contact</a>-->
+<!--                    </li>-->
+
+
+<!--            <script type="text/javascript">-->
+<!--            function googleTranslateElementInit() {-->
+<!--              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');-->
+<!--            }-->
+<!--            </script>-->
+
+<!--            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+
+
+
+
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+
+
+
+<!--    &lt;!&ndash; Carousel &ndash;&gt;-->
+<!--    <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-container" data-bs-ride="carousel"-->
+<!--        data-bs-interval="false">-->
+<!--        <div class="carousel-inner">-->
+<!--            <div class="carousel-container carousel-item active">-->
+<!--                <img src="{% static 'images/HomeDigital.png' %}" class="d-block w-100 carousel-img" alt="">-->
+<!--                <div class="carousel-caption d-none d-md-block">-->
+<!--                    <h1 class="carousel-text1">Organic & Natural</h1>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="carousel-container carousel-item">-->
+<!--                <img src="{% static 'images/Banana.jpg' %}" class="d-block w-100 carousel-img" alt="">-->
+<!--                <div class="carousel-caption d-none d-md-block">-->
+<!--                    <h1 class="carousel-text2">ONE STOP SHOP To Keep YOUR HEALTH ON TOP</h1>-->
+<!--                    <button type="button" class="btn btn-outline-success btn-lg carousel-button ">Discover</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="carousel-container carousel-item">-->
+<!--                <img src="{% static 'images/HomeDigital.png' %}" class="d-block w-100 carousel-img" alt="">-->
+<!--                <div class="carousel-caption d-none d-md-block">-->
+<!--                    <h1 class="carousel-text3">Organic & Natural</h1>-->
+<!--                    <h4 class="carousel-text3-subHeading">As the nationally certified organic grocer in the country, we-->
+<!--                        are offering you the best choice of vegies we possible can.</h4>-->
+<!--                    <div class="carousel-page3-buttons">-->
+<!--                        <button type="button" class="btn btn-lg carousel-button1">Shop Now</button>-->
+<!--                        <button type="button" class="btn btn-lg carousel-page3-button2 carousel-button1">Discover</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="carousel-indicators">-->
+<!--                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"-->
+<!--                    aria-current="true" aria-label="Slide 1"></button>-->
+<!--                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"-->
+<!--                    aria-label="Slide 2"></button>-->
+<!--                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"-->
+<!--                    aria-label="Slide 3"></button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">-->
+<!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Previous</span>-->
+<!--        </button>-->
+<!--        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">-->
+<!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Next</span>-->
+<!--        </button>-->
+<!--    </div>-->
+<!--      &lt;!&ndash;Carousel Ends&ndash;&gt;-->
+
+
+
+<!--      &lt;!&ndash;Audio&ndash;&gt;-->
+<!--      <script>-->
+<!--        function audio1() {-->
+<!--          var audio = document.getElementById("Audio1");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio2() {-->
+<!--          var audio = document.getElementById("Audio2");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio3() {-->
+<!--          var audio = document.getElementById("Audio3");-->
+<!--          audio.play();-->
+<!--        }-->
+
+<!--        function audio4() {-->
+<!--          var audio = document.getElementById("Audio4");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio5() {-->
+<!--          var audio = document.getElementById("Audio5");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio6() {-->
+<!--          var audio = document.getElementById("Audio6");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio7() {-->
+<!--          var audio = document.getElementById("Audio7");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio8() {-->
+<!--          var audio = document.getElementById("Audio8");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio9() {-->
+<!--          var audio = document.getElementById("Audio9");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio10() {-->
+<!--          var audio = document.getElementById("Audio10");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio11() {-->
+<!--          var audio = document.getElementById("Audio11");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio12() {-->
+<!--          var audio = document.getElementById("Audio12");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio13() {-->
+<!--          var audio = document.getElementById("Audio13");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio14() {-->
+<!--          var audio = document.getElementById("Audio14");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--        function audio15() {-->
+<!--          var audio = document.getElementById("Audio15");-->
+<!--          audio.play();-->
+<!--        }-->
+<!--      </script>-->
+<!--      &lt;!&ndash;Audo Ends&ndash;&gt;-->
+
+
+
+<!--      &lt;!&ndash;Cards&ndash;&gt;-->
+<!--      <h3 class="Admin text-align"> Steps to sign in and registration.-->
+<!--        <audio id="Audio1">-->
+<!--          <source src="{% static 'audios/Audio1.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio1()" /><br></h3>-->
+<!--      <div class="Login">-->
+
+<!--        1. Go to home page.-->
+<!--        <audio id="Audio2">-->
+<!--          <source src="{% static 'audios/Audio2.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio2()" /><br><br>-->
+<!--        2. Click on sign up button on top.-->
+<!--        <audio id="Audio3">-->
+<!--          <source src="{% static 'audios/Audio3.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio3()" /><br><br>-->
+
+<!--        3. If you already have an account then add username and password on the visible page and click on login button.-->
+<!--        <audio id="Audio4">-->
+<!--          <source src="{% static 'audios/Audio4.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio4()" /><br><br>-->
+
+<!--        4. Else if you are new to Mera kisan then click on sign up button and it will take you to a new page.-->
+<!--        <audio id="Audio5">-->
+<!--          <source src="{% static 'audios/Audio5.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio5()" /><br><br>-->
+<!--        5. Enter first name, last name, email, username, phone no, and password and then click on sign up.-->
+<!--        <audio id="Audio6">-->
+<!--          <source src="{% static 'audios/Audio6.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio6()" /><br><br>-->
+<!--        6. Once you are signed up follow step 3.-->
+<!--        <audio id="Audio7">-->
+<!--          <source src="{% static 'audios/Audio7.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio7()" /><br><br>-->
+<!--        7. Congratulations you are successfully signed in to Mera kisan.-->
+<!--        <audio id="Audio8">-->
+<!--          <source src="{% static 'audios/Audio8.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio8()" /><br><br>-->
+<!--      </div>-->
+
+<!--      <h3 class="Admin">Steps to add your product-->
+<!--        <audio id="Audio9">-->
+<!--          <source src="{% static 'audios/Audio9.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio9()" /><br></h3>-->
+<!--      <div class="Login">-->
+<!--        1. Go to home page.-->
+<!--        <audio id="Audio10">-->
+<!--          <source src="{% static 'audios/Audio2.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio10()" /><br><br>-->
+<!--        2. Click on shop now button on top right corner.-->
+<!--        <audio id="Audio11">-->
+<!--          <source src="{% static 'audios/Audio11.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio11()" /><br><br>-->
+<!--        3. To proceed further follow step 3 or 4 and 5 from steps to sign in and registration.-->
+<!--        <audio id="Audio12">-->
+<!--          <source src="{% static 'audios/Audio12.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio12()" /><br><br>-->
+<!--        4. If you are on add product page, then enter username, name of your product, category, quantity, your city name,-->
+<!--        section and price of your product.-->
+<!--        <audio id="Audio13">-->
+<!--          <source src="{% static 'audios/Audio13.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio13()" /><br><br>-->
+<!--        5. Then click on enter button to add your product.-->
+<!--        <audio id="Audio14">-->
+<!--          <source src="{% static 'audios/Audio14.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio14()" /><br><br>-->
+<!--        6. Congratulations your product has been added to Mera kisan.-->
+<!--        <audio id="Audio15">-->
+
+<!--          <source src="{% static 'audios/Audio15.mp3' %}" type="audio/mpeg" loop>-->
+<!--        </audio>-->
+<!--        <img src="{% static 'images/speaker.png' %}" height="15" width="15" onClick="audio15()" /><br><br>-->
+<!--      </div>-->
+
+
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+
+<!--    <footer id="footer" class="container-fluid">-->
+<!--        <i class="footer-icons fab fa-linkedin"></i>-->
+<!--        <i class="footer-icons fab fa-facebook-f"></i>-->
+<!--        <i class="footer-icons fab fa-instagram"></i>-->
+<!--        <i class="footer-icons fas fa-envelope"></i>-->
+<!--        <p>© Mera Kisan</p>-->
+<!--        <p class="float-end"><a href="#" class="back-to-top">Back to top</a></p>-->
+<!--    </footer>-->
+
+<!-- &lt;!&ndash; Option 1: Bootstrap Bundle with Popper &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--</body>-->
+<!--</html>-->

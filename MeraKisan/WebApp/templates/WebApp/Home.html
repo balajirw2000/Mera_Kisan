@@ -1,0 +1,251 @@
+{% load static %}
+<link rel="stylesheet" href={%static "CSS/home.css"%}>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ekko.lightbox.css">
+
+  <title>Farm Website</title>
+   <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">
+
+    <!--Used for Icons-->
+    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>
+
+
+  <style>
+    .bg-img{
+    background-image: url({% static 'images/Homeimg.jpeg' %});
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .img{
+    max-width: 100%;
+    height: auto;
+    }
+  </style>
+
+  <style type='text/css'>
+  iframe.goog-te-banner-frame{ display: none !important;}
+  </style>
+
+  <style type='text/css'>
+  body {position: static !important; top:0px !important;}
+  </style>
+
+  <style type='text/css'>
+  .goog-logo-link {display:none !important;}
+  .goog-te-gadget{color: transparent !important;}
+  </style>
+
+</head>
+
+<body>
+
+
+
+
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-text fixed-top navbar-bg-color">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin-left: 20px;">Mera Kisan</a>
+
+                        <a class="nav-link" href="#"><i class="fas fa-cart-plus icon-cart"></i></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto mr-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="\">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/ShopNow">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/DigitalPlatform">Digital Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/logout">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Login/Sign Up
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/account/login">Login</a>
+                            </li>
+
+                            <li><a class="dropdown-item" href="/signup1">Sign Up (Farmer)</a></li>
+
+                            <li><a class="dropdown-item" href="/account/registerc">Sign Up (Customer)</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+
+                <li class="nav-item">
+
+                  <div id="google_translate_element" class="myClass" style="margin-top: 10px; margin-left: 5px;"></div>
+
+            <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<!--  <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">-->
+<!--    <div class="container">-->
+<!--      <div class="navbar-brand">-->
+<!--        <img class="img-fluid" src="{% static 'images/logo.png' %}" alt="">-->
+<!--      </div>-->
+
+
+<!--      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--        <ul class="navbar-nav ml-auto">-->
+<!--          <li class="nav-item active">-->
+<!--            <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="shop/ShopNow">Store</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="DigitalPlatform\">Digital Platform</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="our_value\">Our Value</a>-->
+<!--          </li>-->
+
+
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="signup1\">Aadhaar</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="shop/add">Add Product</a>-->
+<!--          {% if user.is_authenticated %}-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="account/logout">Logout</a>-->
+<!--          </li>-->
+
+<!--          <li class="nav-item">-->
+<!--           <label>-->
+<!--             Hello,{{user.first_name}}</label>-->
+<!--          </li>-->
+
+
+<!--          {% else %}-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="account/login">Login</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="account/register">Register</a>-->
+<!--          </li>-->
+<!--          {% endif %}-->
+
+<!--          <div id="google_translate_element" class="myClass" style="margin-top: 10px; margin-left: 5px;"></div>-->
+
+<!--            <script type="text/javascript">-->
+<!--            function googleTranslateElementInit() {-->
+<!--              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');-->
+<!--            }-->
+<!--            </script>-->
+
+<!--            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+<!--        </ul>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </nav>-->
+
+
+  <!--Main Content-->
+  <!--background image-->
+  <div class="bg-img">
+    <div class="overlay">
+      <!-- Home Page Content-->
+      <div class="home-page-content">
+        <h1 class="text-center home-page-text h1-responsive pt-5">Agriculture</h1>
+        <h5 class="text-center home-supporting-text">Bringing you the freshest produce in the land</h5>
+      </div>
+    </div>
+  </div>
+
+
+
+
+ <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap  -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

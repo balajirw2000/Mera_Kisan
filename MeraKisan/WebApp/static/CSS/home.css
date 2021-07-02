@@ -1,0 +1,114 @@
+
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.dropdown-item:hover {
+  color: #bceb3c;
+}
+
+.navbar {
+  border-bottom: 1px solid #bceb3c;
+}
+
+.container-fluid{
+  float: right;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #bceb3c;
+}
+.nav-item:hover{
+    color: #bceb3c;
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: #bceb3c;
+}
+
+.icon-cart {
+  color: #bceb3c;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  border: 1px solid #bceb3c;
+}
+
+.navbar-bg-color {
+  background-color: white;
+}
+
+.navbar-nav {
+  margin-right: 4%;
+}
+
+.nav-item{
+  margin: 0.75em;
+}
+
+.navbar-text {
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+/*.navbar{
+    background-color: rgba(223, 5, 5, 0.2)!important;
+}
+.navbar .navbar-brand img{
+    max-width: 100%;
+    height: auto;
+}
+.navbar .navbar-toggler{
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+}
+.navbar .nav-link{
+    color: #f32106;
+}
+.navbar .navbar-collapse .navbar-nav li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    color: #f32106;
+}
+.navbar .navbar-collapse .navbar-nav .nav-link:hover{
+    color: hsl(36, 98%, 49%);
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+*/
+.home-page-content{
+    padding-top: 12%;
+}
+.home-page-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 1px #1f2346;
+}
+.home-supporting-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 1px #1f2346;
+
+}
+
+
+

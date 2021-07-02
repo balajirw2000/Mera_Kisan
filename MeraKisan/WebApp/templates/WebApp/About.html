@@ -1,0 +1,246 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AboutUs</title>
+<link rel="stylesheet" href={%static "CSS/About.css"%}>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ekko.lightbox.css">
+
+
+   <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">
+
+    <!--Used for Icons-->
+    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>
+
+
+  <style type='text/css'>
+  iframe.goog-te-banner-frame{ display: none !important;}
+  </style>
+
+  <style type='text/css'>
+  body {position: static !important; top:0px !important;}
+  </style>
+
+  <style type='text/css'>
+  .goog-logo-link {display:none !important;}
+  .goog-te-gadget{color: transparent !important;}
+  </style>
+
+    <style>
+         .navbar {
+  border-bottom: 1px solid #bceb3c;
+}
+
+.container-fluid{
+  float: right;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #bceb3c;
+}
+.nav-item:hover{
+    color: #bceb3c;
+}
+.navbar-light .navbar-nav .nav-link.active {
+  color: #bceb3c;
+}
+
+.icon-cart {
+  color: #bceb3c;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  border: 1px solid #bceb3c;
+}
+
+.navbar-bg-color {
+  background-color: white;
+}
+
+.navbar-nav {
+  margin-right: 4%;
+}
+
+.nav-item{
+  margin: 0.75em;
+}
+
+.navbar-text {
+  font-weight: 500;
+}
+
+/* Footer */
+
+#footer {
+  color: #d3d3d3;
+  text-align: center;
+  background-color: #001524;
+  padding: 1.0%;
+}
+
+.back-to-top {
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
+
+.footer-icons {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.footer-icons:hover {
+  color: #fff;
+}
+.off-info .sm-title {
+    background: var(--carribean-green);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+		 <!-- NavBar -->
+ <nav class="navbar navbar-expand-lg navbar-light navbar-text fixed-top navbar-bg-color">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mera Kisan</a>
+            <a class="nav-link" href="#"><i class="fas fa-cart-plus icon-cart"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto mr-5">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="\">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="\About/">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="\DigitalPlatform/">Digital Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="\contact">Contact</a>
+                    </li>
+                </ul>
+
+
+            <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </div>
+        </nav>
+
+<br><br>
+
+
+  <div class="features">
+
+    <div class="feature-row">
+      <img class="harvest" src="{% static 'images/harvest.png' %}" alt="">
+      <h3>Best In Quality</h3>
+      <p>Welcome to our warm and friendly online market Our certified organic store supplies organic, natural,
+        and wholefood products which are the best in quality in the market and full of
+        essential nutrients.
+      </p>
+    </div>
+
+    <div class="feature-row">
+      <img class="broccolli" src="{% static 'images/broccoli.png' %}" alt="">
+      <h3>Hand-picked & Organic</h3>
+      <p>We carefully evaluate products, and they are specially hand-picked for you & your family.
+        Ensuring that you eat healthy and helping you increase your immunity.</p>
+    </div>
+
+    <div class="feature-row">
+      <img class="spinach" src="{% static 'images/spinach.png' %}" alt="">
+      <h3>Fresh From Farm</h3>
+      <p>We directly purchase our products from the local farmer's, hence there's no subsidary agent between till it reaches to you.
+        With our low prices, you'll be able to cook a healthy meal at a budget-friendly cost.</p>
+    </div>
+
+  </div>
+  <div class="wrapper">
+    <h2>Meet Our Team</h2>
+    <div class="person-one" style="margin-right: 170px;">
+      <img class="first-person" src="" alt="">
+      <h3 class="first-name">Bhavyesh Shah</h3>
+      <h5 class="card-title">⭐⭐⭐⭐</h5>
+      <p class="tech-stack">Web Developer</p>
+    </div>
+
+
+    <div class="person-two" style="margin-right: 170px;">
+      <img class="second-person" src="" alt="">
+      <h3 class="first-name">Balaji Wadawadagi</h3>
+      <h5 class="card-title">⭐⭐⭐⭐</h5>
+      <p>Web Developer</p>
+
+    </div>
+
+    <div class="person-three">
+      <img class="third-person" src="" alt="">
+      <h3 class="first-name">Gaurav Wadhwa</h3>
+      <h5 class="card-title">⭐⭐⭐⭐</h5>
+      <p>Web Developer</p>
+
+    </div>
+  </div>
+
+<!-- Footer -->
+
+    <footer id="footer" class="container-fluid">
+        <i class="footer-icons fab fa-linkedin"></i>
+        <i class="footer-icons fab fa-facebook-f"></i>
+        <i class="footer-icons fab fa-instagram"></i>
+        <i class="footer-icons fas fa-envelope"></i>
+        <p>© Mera Kisan</p>
+        <p class="float-end"><a href="#" class="back-to-top">Back to top</a></p>
+    </footer>
+
+
+</body>
+
+</html>
