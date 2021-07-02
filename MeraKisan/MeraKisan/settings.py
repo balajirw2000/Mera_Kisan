@@ -95,7 +95,7 @@ DATABASES = {
         # user name.
         'USER': 'root',
         # password
-        'PASSWORD': 'Balarw@2210',
+        'PASSWORD': '********',
         # connect options
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",},
     }
@@ -156,7 +156,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_PORT = ***
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'merakisan21@gmail.com'
-EMAIL_HOST_PASSWORD = 'MeraKisan21@'
+EMAIL_HOST_USER = 'abcd@gmail.com'
+EMAIL_HOST_PASSWORD = '**********'
